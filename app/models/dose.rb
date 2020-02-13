@@ -1,5 +1,5 @@
 class Dose < ApplicationRecord
-  validates :description, uniqueness: true, presence: true
+  validates :description, presence: true
   belongs_to :ingredient
   belongs_to :cocktail
   validates :ingredient_id, presence: true
