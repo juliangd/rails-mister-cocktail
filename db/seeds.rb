@@ -2,6 +2,9 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 
+# should include more command,
+# delete entire db before executing
+
 
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
