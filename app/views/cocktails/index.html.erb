@@ -1,0 +1,32 @@
+<h1>Cocktails</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+    <div class="cards">
+      <ul>
+        <div class="card">
+          <% @cocktails.each do |cocktail| %>
+          <li>
+            <div class="card-product">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <div class="card-product-infos">
+                <h2>
+                  <%= link_to cocktail.name, cocktail_path(cocktail)%>
+                </h2>
+                <% cocktail.doses.each do |dose| %>
+                <p><%= dose.description %></p>
+                <% end %>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </div>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<%= button_to "Create a New Drink", new_cocktail_path%>
