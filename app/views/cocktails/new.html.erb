@@ -1,5 +1,11 @@
-<p>new</p>
 
-<%= render 'form', cocktail: @cocktail %>
+<div>
+  <h1>Create a new cocktail</h1>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+</div>
 
 <%= link_to "Back to Cocktails", cocktails_path %>
+
