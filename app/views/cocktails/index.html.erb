@@ -2,11 +2,9 @@
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <h1>Cocktails</h1>
-    <div class="cards">
-      <ul>
-        <div class="card">
+    <ul class="cards">
+        <li class="card">
           <% @cocktails.each do |cocktail| %>
-          <li>
             <div class="card-product">
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
               <div class="card-product-infos">
@@ -18,11 +16,10 @@
                 <% end %>
               </div>
             </div>
-          </li>
+
           <% end %>
-        </div>
+          </li>
       </ul>
-    </div>
     <%= link_to "Create a New Drink", new_cocktail_path, class: "btn btn-gradient" %>
 
     </div>
