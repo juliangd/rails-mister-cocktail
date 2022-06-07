@@ -1,27 +1,28 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <h1>Cocktails</h1>
-    <ul class="cards">
-        <li class="card">
-          <% @cocktails.each do |cocktail| %>
-            <div class="card-product">
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-              <div class="card-product-infos">
-                <h2>
-                  <%= link_to cocktail.name, cocktail_path(cocktail)%>
-                </h2>
-                <% cocktail.doses.each do |dose| %>
-                <p><%= dose.description %></p>
-                <% end %>
-              </div>
+<div class="cocktails-header">
+  <h1>Cocktails</h1>
+</div>
+<div class="cocktails-container">
+<div class="row justify-content-center">
+  <div class="col-sm-8">
+  <ul class="cards">
+      <li class="card">
+        <% @cocktails.each do |cocktail| %>
+          <div class="card-product" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/dmkmrNptMpw/200x200/)">
+            <div class="card-product-infos">
+              <h2>
+                <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%>
+              </h2>
+              <% cocktail.ingredients.each do |ingredient| %>
+              <p><%= ingredient.name %></p>
+              <% end %>
             </div>
+          </div>
 
-          <% end %>
-          </li>
-      </ul>
-    <%= link_to "Create a New Drink", new_cocktail_path, class: "btn btn-gradient" %>
-
+        <% end %>
+        </li>
+    </ul>
     </div>
   </div>
 </div>
+
+

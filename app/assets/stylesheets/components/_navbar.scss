@@ -10,3 +10,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.btn-new-cocktail {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(red, #000000);
+  transition: background 0.3s ease;
+  border: 1px solid #000000;
+}
